@@ -1,15 +1,11 @@
-"""
-Quick sanity-check harness: hand-crafted scenarios, same idea as the
-"Running tests on various scenarios" table in the original slides.
-"""
+
 import joblib
 import numpy as np
 import pandas as pd
 
 FEATURES = ["ED_N", "ED_M", "S_N", "S_M", "q_N", "q_M", "D_MN"]
 
-# Hand-crafted feature vectors representing plausible scenarios.
-# (ED_N, ED_M in metres; S_N, S_M in km/h; q_N, q_M = flow; D_MN = DTW distance)
+
 SCENARIOS = [
     ("NORMAL - Free flowing traffic, independent vehicles",
      [70.0, 65.0, 45.0, 42.0, 900.0, 850.0, 1400.0], 0),
