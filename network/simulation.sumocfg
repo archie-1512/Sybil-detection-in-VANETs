@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+        <net-file value="grid.net.xml"/>
+        <route-files value="trips.trips.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="220"/>
+    </time>
+    <processing>
+        <collision.action value="none"/>
+    </processing>
+</configuration>
