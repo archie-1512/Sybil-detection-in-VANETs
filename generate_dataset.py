@@ -1,25 +1,3 @@
-"""
-Dataset generation for Privacy-Preserving Sybil Detection in VANETs.
-
-Pipeline:
-  1. Drive a real SUMO simulation (grid network) via TraCI, step by step.
-  2. For each real vehicle SUMO controls, spawn 0-2 "Sybil ghost" identities:
-     fake vehicle_ids that a malicious node fabricates and broadcasts,
-     with positions/speeds that shadow the real (attacker) vehicle plus
-     jitter. This is the actual definition of a Sybil attack: one physical
-     vehicle, many claimed identities.
-  3. At each timestep, pick a receiver vehicle and build its neighbour list
-     (Module 1) from every vehicle/ghost within communication range.
-  4. Apply Laplace noise (Module 5) to whatever the neighbour broadcasts,
-     because in a real deployment the receiver never sees ground truth.
-  5. Extract the 7 pairwise features (Module 2) for pairs drawn from the
-     neighbour list and label them Sybil (1) if the pair are siblings from
-     the same attacker family, Normal (0) otherwise.
-  6. Write everything to sumo_features_dataset.csv.
-
-Run:  python3 generate_dataset.py
-"""
-
 import os
 import sys
 import random
