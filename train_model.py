@@ -1,24 +1,4 @@
-"""
-Module 3 (revised): Sybil Classification using classical ML.
 
-Your professor was right that a CNN is overkill here: the whole feature
-vector is 7 hand-engineered numbers, not an image or a sequence with local
-spatial structure for convolution to exploit. A CNN on 7 scalars just
-becomes an expensive, harder-to-justify MLP. Tree ensembles (Random Forest /
-Gradient Boosting) are the standard, defensible choice for this kind of
-tabular, engineered-feature classification problem, and they also give you
-feature importances for free, which is great for your report.
-
-This script:
-  1. Loads sumo_features_dataset.csv
-  2. Trains + compares Logistic Regression, Random Forest, and Gradient
-     Boosting with stratified train/test split
-  3. Reports Accuracy / Precision / Recall / F1 / Confusion Matrix for each
-     (same metrics your slide already used)
-  4. Saves the best model + prints feature importances
-  5. Runs a few hand-crafted "scenario" sanity checks, like your original
-     "Running tests on various scenarios" table
-"""
 
 import argparse
 import joblib
