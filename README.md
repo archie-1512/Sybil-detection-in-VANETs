@@ -1,6 +1,4 @@
-# Privacy-Preserving Sybil Detection in VANETs
 
-Project for BCSE314L (Privacy and Security in IoT), VIT Vellore.
 
 Vehicular Ad-hoc Networks (VANETs) let cars broadcast location, speed and
 traffic info to each other over V2V communication. A Sybil attack is when
